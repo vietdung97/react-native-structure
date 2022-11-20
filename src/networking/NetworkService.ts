@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import { apiURL, headers, timeout } from '@/networking/config';
 import { requestInterceptor, responseInterceptor } from '@/networking/interceptors';
-export class NetworkService {
+class NetworkService {
   public client: AxiosInstance;
   constructor() {
     this.client = axios.create({ baseURL: apiURL, headers, timeout });
@@ -17,8 +17,8 @@ export class NetworkService {
     delete this.client.defaults.headers.common.authorization;
   }
 
-  request({ method, url, data, ...config }: AxiosRequestConfig<any>) {
-    return this.client.request({ method, url, data, ...config });
+  request<T>({ method, url, data, ...config }: AxiosRequestConfig<any>) {
+    return this.client.request<T>({ method, url, data, ...config });
   }
 }
 
