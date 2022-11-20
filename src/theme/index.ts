@@ -1,2 +1,3 @@
-export { spacing } from '@/theme/spacing';
-export { typography } from '@/theme/typography';
+export * from '@/theme/spacing';
+export * from '@/theme/typography';
+export * from '@/theme/scale';

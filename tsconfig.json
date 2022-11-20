@@ -18,6 +18,7 @@
     "strict": true,
     "target": "esnext",
     "resolveJsonModule": true,
+    "strictPropertyInitialization": false,
     /* Completeness */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   }

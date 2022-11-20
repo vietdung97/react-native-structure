@@ -1,10 +1,23 @@
-export const NAVIGATION = {
-  home: 'Home Screen',
-  login: 'Login Screen',
-  profile: 'Profile Screen',
-};
+export enum ROOT_ROUTES {
+  AUTH_NAVIGATION = 'AUTH_NAVIGATION',
+  APP_NAVIGATION = 'APP_NAVIGATION',
+}
 
-export const TABS = {
-  home: 'Home',
-  profile: 'Profile',
-};
+export enum AUTH_NAVIGATION {
+  LOGIN = '[AUTH] LOGIN',
+}
+
+export enum APP_NAVIGATION {
+  HOME = '[APP] HOME',
+  SEARCH = '[APP] SEARCH',
+  CREATE = '[APP] CREATE',
+  NOTIFICATION = '[APP] NOTIFICATION',
+  PROFILE = '[APP] PROFILE',
+  COMMENT = '[APP] COMMENT',
+  CHAT = '[APP] CHAT',
+  MEDIA = '[APP] MEDIA',
+}
+
+export enum HOME_NAVIGATION {
+  NEW_FEED = '[HOME] NEW_FEED',
+}

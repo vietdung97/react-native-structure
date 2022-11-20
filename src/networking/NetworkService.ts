@@ -1,12 +1,12 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
-import { baseURL, headers } from '@/networking/config';
+import { apiURL, headers, timeout } from '@/networking/config';
 import { resInterceptor } from '@/networking/interceptors';
 
 export class NetworkService {
   public client: AxiosInstance;
   public time = Date.now();
   constructor() {
-    this.client = axios.create({ baseURL, headers });
+    this.client = axios.create({ baseURL: apiURL, headers, timeout });
     this.client.interceptors.response.use(resInterceptor.onFulfill, resInterceptor.onReject);
   }
 
